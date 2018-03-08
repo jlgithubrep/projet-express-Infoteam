@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<% include header %>
+
+    <body>
+        <!-- NAVBAR -->
+        <% include navbar %>
+
+        <!-- MODIF MDP -->
+        <h1>
+            <%= title %>
+        </h1>
+        
+        <% if(badOldMdp == 1){%>
+            <div>
+                <p>Votre ancien mot de passe n'est pas celui attendu</p>
+            </div>
+            <% } %>
+                <% if(newMdpSuccess == 1){%>
+                    <div>
+                        <p>Mot de passe modifier avec succes</p>
+                    </div>
+                    <% } %>
+                        <% if (errors) { %>
+                            <ul>
+                                <%  for (let i in errors) { %>
+                                    <li>
+                                        <%=  errors[i].param %> :
+                                            <%=  errors[i].msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                            <% }  %>
+        <section class="container">
+            <form action="/personne/modifmdp" method="POST">
+                <div class="form-group">
+                    <label for="mdpFormOld">Ancien mot de passe:</label>
+                    <input class="form-control" maxlength="40" type="password" id="mdpFormOld" name="mdpFormOld" required/>
+                </div>
+                <div class="form-group">
+                    <label for="mdpFormNew">Nouveau mot de passe:</label>
+                    <input class="form-control" maxlength="40" type="password" id="mdpFormNew" name="mdpFormNew" required/>
+                </div>
+                <div class="form-group">
+                    <label for="mdpFormNewBis"> Retapez le nouveau mot de passe:
+</label>
+                    <input class="form-control" maxlength="40" type="password" id="mdpFormNewBis" name="mdpFormNewBis" required/>
+                </div> 
+                <button type="submit" class="btn btn-outline-primary btnCard">Modification</button>
+            </form>
+        </section>
+
+
+    </body>
+
+</html>

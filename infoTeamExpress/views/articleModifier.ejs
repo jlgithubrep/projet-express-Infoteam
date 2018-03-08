@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<% include header %>
+<body>
+    <!-- NAVIGATION -->
+   <% include navbar %>
+
+    <!-- TITRE -->
+    <h1>Modifiez ou Supprimez vos article</h1>
+
+    <section class="container">
+        <div class="row">
+            <% for (let i = 0; i < tabN.length; i++) {%>
+                <div class="col-md-4">
+                    <div class="card border-primary mb-3 articleCard" style="max-width: 18rem; max-height: 22rem;">
+                        <div class="card-body text-primary">
+                            <h5 class="card-title">
+                                <%= tabT[i] %>
+                            </h5>
+                            <p class="card-text">
+                                <%= tabC[i] %>
+                            </p>
+                        </div>
+                        <div class="card-header">
+                            <%= tabA[i] %>
+                        </div>
+                        
+                            <div class="btnModifCom">
+                                <form action="/article/modification/:<%= tabN[i]%>" method="GET" class="col-md-12 formModifArticle">
+                                    <button type="submit" class="btn btn-outline-success btnCard">
+                                        <img src="/images/modifIcon.svg" alt="modifIcon">
+                                    </button>
+                                </form>
+                                <form action="/article/suppression/:<%= tabN[i]%>" method="GET" class="col-md-12 formModifArticle">
+                                    <button type="submit" class="btn btn-outline-danger btnCard">
+                                        <img src="/images/deleteIcon.svg" alt="deleteIcon">
+                                    </button>
+                                </form>
+                            </div>
+                            
+                            
+                            
+                            
+                        
+                    </div>
+                </div>
+                
+                <% } %>
+        </div>
+    
+    
+    </section>
+</body>
+</html>

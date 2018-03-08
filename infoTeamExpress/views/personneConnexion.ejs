@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<% include header %>
+
+    <body>
+        <!-- NAVBAR -->
+        <% include navbar %>
+
+        <!-- connexion -->
+        <h1>
+            Connectez vous !
+        </h1>
+        <p>
+            
+        </p>
+        
+        <div class="container">
+            <form action="/personne/connexionsubmit" method="POST">
+                <div class="form-group">
+                    <label for="mailLoginForm">Email :</label>
+                    <input class="form-control" type="text" name="mailLoginForm" id="mailLoginForm" required/>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="passwordForm">Mot de passe : </label>
+                    <input class="form-control" type="password" name="passwordForm" id="passwordForm" required/>
+                </div>
+                <button type="submit" class="btn btn-outline-primary btnCard">Connexion</button>
+            </form>
+
+
+            <% if (userExist == false) {%>
+                <p>L'user n'existe pas</p>
+                <%}%>
+                <button class="btn btn-outline-success btnCard">
+                    <a href="/personne/inscription">Inscription</a>
+                </button>
+                
+
+        </div>
+    </body>
+
+</html>

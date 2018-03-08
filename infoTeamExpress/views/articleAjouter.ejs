@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- BOOTSTRAP + CSS CONTENU DANS HEADER -->
+<% include header %>
+
+<!-- formulaire de création d'article
+       
+        -doit contenir :
+        -un titre
+        -un tag
+        -un textarea
+-->
+
+<body>
+
+    <!-- NAVIGATION -->
+    <% include navbar %>
+
+    <!-- TITRE -->
+    <h1>Informez Nous !</h1>
+
+
+    <!-- FORMULAIRE -->
+    <section class="container">
+        <form action="/article/ajouter" method="POST">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="titre">Choisissez un Titre</label>
+                </div>
+                <input type="text" class="form-control" aria-label="Titre" aria-describedby="inputGroup-sizing-sm" name="titre" id="titre">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="tag">Choisissez un Tag</label>
+                </div>
+                <select class="custom-select" name="tag" id="tag">
+                    <option value="sport">Sport</option>
+                    <option value="economie">Economie</option>
+                    <option value="voyage">Voyage</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="contenuArticle">Ecrivez ici votre article</label>
+                </div>
+                <textarea class="form-control" aria-label="contenuArticle" name="contenuArticle" id="contenuArticle" rows="10"></textarea>
+            </div>
+            <div class="btnModifCom">
+                <button type="submit" class="btn btn-outline-primary btnCard" id="btnSubmit"><img src="/images/validIcon.svg" alt="validIcon"></button>
+            </div>
+            
+        </form>
+    </section>
+    
+    <!-- SCRIPT JS CONTENU DANS FOOTER -->
+    <% include footer %>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+    <% if (connected){ %>
+        <nav class="navbar navbar-light" id="navBarCo">
+            <a class="navbar-brand" id="lienNavBar" href="/">
+            <img src="/images/logoBook.svg" width="30" height="30" alt="">
+            <h4 id="titreNavBar">InfoTeam</h4>
+            <p id="nomConnexion">
+                <span id="prenomUserNavBar">
+                    <%= prenomUser %>
+                </span>
+                <span id="nomUserNavBar">
+                    <%= nomUser%>
+                </span>
+            </p>
+            </a>
+            <a href="/mail/newsletter"><img src="/images/newsletter.svg" alt="newsletter" id="newsletterImgCo"></a>
+            
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Accueil</a>
+                </li>
+                <%if (typeUser == 'journaliste'){ %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/article/ajouter">Poster un Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/article/modifier">Modifier un Article</a>
+                    </li>
+                <% } %>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/personne/modification">Gestion de Compte</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/personne/deconnexion">Déconnexion</a>
+                </li>  
+            </ul>
+        </nav>
+    <% }else {%>
+        <nav class="navbar navbar-light" id="navBar">
+            <a class="navbar-brand" id="lienNavBar" href="/">
+                <img src="/images/logoBook.svg" width="30" height="30" alt="">
+                <h4 id="titreNavBar">InfoTeam</h4>
+            </a>
+            
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/personne/inscription">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/personne/connexion">Connexion</a>
+                </li>
+            </ul>
+        </nav>
+    <% } %> 
+</body>
+</html>

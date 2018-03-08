@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<% include header %>
+
+    <body>
+
+<!-- NAVBAR -->
+        <% include navbar %>
+
+        <!-- modification -->
+        <h1>
+            <%= title %>
+        </h1>
+        
+        <% if(mailexist==1){ %>
+            <div>
+                <p>Ce mail existe déjà sur infoTeam</p>
+            </div>
+            <% } %>
+        
+                <% if(modifok==1){ %>
+                    <div>
+                        <p>Modification(s) enregistrée(s) avec succès</p>
+                    </div>
+                    <% } %>
+        
+                        <% if (errors) { %>
+                            <ul>
+                                <%  for (let i in errors) { %>
+                                    <li>
+                                        <%=  errors[i].param %> :
+                                            <%=  errors[i].msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                            <% }  %>
+
+        <div>
+            <section class="container">
+                <form action="/personne/modification" method="POST">
+                    <div class="form-group">
+                        <label for="nomForm">Nom :</label>
+                        <input class="form-control" id="nomForm" type="text" name="nomForm" value="<%=n%>"maxlength="20"  required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenomForm">Prenom :</label>
+                        <input class="form-control" id="prenomForm" type="text" name="prenomForm" value="<%=p%>" maxlength="20" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="mailForm">Email : </label>
+                        <input class="form-control" id="mailForm" type="text" id="mailForm" name="mailForm" value="<%=m%>" maxlength="50" required/>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary btnCard">Modification</button>
+                </form>
+                <div class="lienModifPersonne">
+                    <a href="/personne/modifmdp" maxlength="40" id="lienModifMdp">Modifier le mot de passe</a>
+                    
+                </div>
+                
+                </div>
+            </section>
+            
+
+    </body>
+
+</html>

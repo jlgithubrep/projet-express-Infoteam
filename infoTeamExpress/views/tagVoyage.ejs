@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+
+    <body>
+
+        <!-- NAVBAR -->
+        <% include navbar %>
+        
+        <!-- SIDE BAR -->
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-item nav-link" href="/">Derniere news</a>
+            <a class="nav-item nav-link" href="/article/sport">Sport</a>
+            <a class="nav-item nav-link" href="/article/economie">Economie</a>
+            <a class="nav-item nav-link" href="/article/voyage">Voyage</a>
+        </nav>
+
+        <!-- article -->
+        <h1>Voyage</h1>
+        <section class="container">
+            <div class="row">
+                <% for (let i = 0; i < tabN.length; i++) {%>
+                    <div class="col-md-4 oneCard">
+                        
+                        <div class="card border-primary mb-12 articleCard" style="max-width: 60rem;">
+                            <img class="card-img-top" src="/images/voyageCard.jpg" alt="Card image cap">
+                            <div class="card-body text-primary">
+                                <div class="btnModifCom">
+                                    <form action="/article/afficherFull/:<%= tabN[i]%>" method="GET" class="col-md-">
+                                        <button type="submit" class="btn btn-outline-primary col-md-6 btnCard">
+                                            <img src="/images/lireIcon.svg" alt="lireIcon">
+                                        </button>
+                                    </form>
+                                </div>
+                                <h5 class="card-title">
+                                    <%= tabT[i] %>
+                                </h5>
+                        
+                                <p class="card-text">
+                                    <%= tabC[i] %>
+                                </p>
+                            </div>
+                            <div class="card-header">
+                                <%= tabA[i] %>
+                                    <%= tabD[i] %>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                    </div>
+                    <% } %>
+            </div>
+
+
+        </section>
+    </body>
+
+</html>

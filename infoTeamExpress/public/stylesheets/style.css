@@ -1,0 +1,324 @@
+/* 
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Plaster', cursive;
+font-family: 'Russo One', sans-serif;
+font-family: 'Krona One', sans-serif;
+
+*/
+
+
+
+
+
+/* GENERALE */
+body{
+  transition: all 0.9s;
+  font-family: 'Nanum Gothic', sans-serif;
+  /* background-image: url(/images/background.jpg);
+  background-position: center;
+  background-size: cover; */
+}
+a{
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #1B9AAA;
+}
+a:hover{
+  color: #1B9AAA;
+}
+form{
+  text-align: center;
+}
+
+#newsletterImgCo{
+  width: 2em;
+  height: 2em;
+  margin: auto;
+  transition: 0.9s;
+}
+#newsletterImgCo:hover{
+  transform: scale(1.09);
+  color: #DE8F6E;
+}
+h1{
+  color: #1B9AAA;
+  font-weight: bolder;
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+}
+h2{
+  color: #1B9AAA;
+  font-weight: bolder;
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+}
+#nomUserNavBar{
+  text-transform: uppercase;
+}
+#prenomUserNavBar{
+  text-transform: capitalize;
+}
+#nomConnexion{
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+#navBar a{
+  text-decoration: none;
+}
+p{
+  color: #DE8F6E;
+  font-family: 'Nanum Gothic', sans-serif;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* BAR DE NAVIGATION */
+a #lienNavBar{
+  display: inline-block;
+  margin: 0 auto;  
+}
+
+nav #titreNavBar{
+  display: inline-block;
+  margin: 0 auto;
+  font-family: 'Krona One', sans-serif;
+  color: #1B9AAA;
+}
+
+/* navbar tag */
+
+.sidebar{
+  margin: 4em auto;
+}
+nav#navBarCo{
+  background: #272838 !important;
+}
+nav#navBar{
+  background: #272838 !important;
+}
+
+.nav-link{
+  margin: 1em 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  border: 1px solid #1B9AAA;
+  border-radius: 2em;
+  color: #1B9AAA;
+  transition: all 0.9s;
+}
+.nav-link:hover{
+  color: #1B9AAA;
+  transform: scale(1.09);
+  background: rgba(27, 154, 170, 0.2)
+}
+
+
+/* concerne le form sur ajouter.ejs */
+
+/* label */
+label{
+  width: 11em;
+  text-align: left;
+  font-weight: bolder;
+  color: #1B9AAA;
+  text-shadow: 2px 2px 2px #f4f4F4;
+}
+.form-group label{
+  display: block;
+  text-align: left;
+}
+/* button */
+.btn{
+  display: block;
+  margin: 2em auto;
+  transition: all 0.9s;
+  width: 8em;
+  height: 3em;
+  text-align: center !important ;
+  border-radius: 2em;
+}
+.btn:hover{
+  transform: scale(1.09);
+  
+}
+
+/* AFFICHAGE DES ARTICLES */
+
+/* CARDS */
+.oneCard form{
+  text-align: center;
+  margin: auto;
+}
+.oneCard button{
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.articleCard{
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+  height: auto;
+  border-color: #272838 !important;
+}
+.articleCard img{
+  height: 15em;
+}
+.card-title{
+  text-transform: uppercase;
+  color: #DE8F6E;
+  font-weight: bolder;
+  text-align: center;
+}
+.card-text{
+  color: #272838;
+  
+}
+.card-body{
+  height: 8em;
+  overflow: hidden;
+}
+.imageCard{
+  max-height: 30em;
+  
+}
+#articleFull .card-body{
+  height: auto;
+  overflow: visible;
+}
+#articleFull img{
+  height: 30em;
+}
+.card-header{
+  height: 4em;
+  color: #272838;
+  font-weight: bolder;  
+  text-transform: capitalize;
+  margin: auto;
+  text-align: left;
+}
+.card-footer{
+  background-color: #272838 !important;
+  text-transform: uppercase;
+}
+
+#articleFull .card-header{
+  height: auto;
+}
+.btnCard{
+  display: block;
+  margin: 1em auto;
+  width: 11em;
+  text-align: center;
+  border-color: #1B9AAA;
+  color: #1B9AAA;
+  border-radius: 2em !important;
+}
+.btnCard:hover{
+  background-color: #272838;
+  border-color: #1B9AAA;
+  color: #1B9AAA;
+}
+button a{
+  color: #1B9AAA;
+  transition: all 0.9s;
+
+}
+button a:hover{
+  text-decoration: none;
+  color: #1B9AAA;
+  transform: scale(1.09);
+  
+}
+
+/* BUTTON SUPPRIMER */
+#btnSubmitSupp{
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+  transition: all 0.9s;
+  border-radius: 2em !important;
+}
+#btnSubmitSupp:hover{
+  transform: scale(1.09);
+}
+
+/* modifPersonn */
+.lienModifPersonne{
+  text-align: center;
+}
+.lienModifPersonne a{
+  display: inline-block;
+  border: 1px solid #1B9AAA;
+  padding: 1em;
+  margin: 1em;
+  min-width: 10em;
+  border-radius: 2em;
+  text-decoration: none;   
+}
+
+/* formulaire article */
+.formArticle{
+  width: auto;
+  height: 10em;
+  display: block;
+  margin: 1em auto;
+}
+.formArticle input{
+  display: block;
+  height: auto;
+  width: auto;
+  margin: 1em auto;
+}
+/* modifComBtn */
+.btnModifCom button{
+  display: inline-block;
+  margin: 1em auto;
+  height: auto;
+  width: auto;
+  border: none;
+}
+.btnModifCom button img{
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: auto;
+}
+.formModifCom{
+  display: inline-block;
+  margin: auto;
+}
+.affCom{
+  border-bottom: 2px solid #272838;
+  margin-bottom: 2em;
+}
+.formModifArticle{
+  display: inline;
+  text-align: center;
+  margin: auto;
+}
+/* Form newsletter */
+
+
+#formNewsLetter input{
+  display: inline-block;
+
+}
+
+/* mdp */
+
+#lienModifMdp{
+  border: none;
+  transition: all 0.9s;
+}
+#lienModifMdp:hover{
+  color: #DE8F6E;
+  transform: scale(1.09)
+}

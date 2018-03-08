@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<% include header %>
+
+    <body>
+
+        <!-- NAVBAR -->
+        <% include navbar %>
+
+        <!-- inscripttion -->
+
+        <div class="container">
+            <h1>
+                Inscrivez vous !
+            </h1>
+            
+            <% if(mailexist==1){ %>
+                <div>
+                    <p>Ce mail existe déjà sur infoTeam</p>
+                </div>
+            <% } %>
+            
+            <% if(inscriptionsucess==1){ %>
+                <div>
+                    <p>Inscription réussie, vous pouvez vous connecter</p>
+                </div>
+            <% } %>
+            
+            <div>
+            
+                <%  if (inscriptionsuccess) { %>
+                    <!-- <h2>Inscription validee avec succes</h2> -->
+                    <% } else { %>
+                        <% if (errors) { %>
+                            <ul>
+                                <%  for (let i in errors) { %>
+                                    <li>
+                                        <%=  errors[i].param %> :
+                                            <%=  errors[i].msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                            <% }  %>
+                                <form action="/personne/inscription" method="POST">
+                                    <div class="form-group">
+                                        <label for="nomForm">Nom:</label> 
+                                        <input class="form-control" type="text" name="nomForm" maxlength="20" id="nomForm" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="prenomForm">Prenom : </label>
+                                        <input class="form-control" type="text" name="prenomForm" id="prenomForm" maxlength="20" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mailForm">Email : </label>
+                                        <input class="form-control" type="text" id="mailForm" name="mailForm" id="mailForm" maxlength="50" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mdpForm">Mot de passe : </label>
+                                        <input class="form-control" type="password" id="mdpForm" name="mdpForm" id="mdpForm" maxlength="40" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mdpFormBis">Retaper le même mot de passe:</label>
+                                        <input class="form-control" type="password" name="mdpFormBis" id="mdpFormBis" maxlength="40" required/>
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-success btnCard">Inscription</button>
+                                </form>
+            </div>
+            <% } %>
+            
+               
+                            <button class="btn btn-outline-primary btnCard"><a href="/personne/connexion">connexion</a></button>
+                            
+        </div>
+       
+
+    </body>
+
+</html>

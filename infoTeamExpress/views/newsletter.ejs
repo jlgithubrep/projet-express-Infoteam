@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<% include header %>
+
+    <body>
+
+        <!-- NAVBAR -->
+
+        <% include navbar%>
+
+
+            <!-- TAG NAV BAR -->
+            
+
+            <h2>S'abonner à notre newsletter : </h2>
+            <div class="btnModifCom">
+                <form name="form1" method="post" action="/mail/abonnement" id="formNewsLetter">
+                    <label for="x">Se Désabonner</label>
+                    <input type="radio" name="x" value="0" <%=nonabonne %> >
+                    <br>
+                    <label for="x">S'abonner</label>
+                    <input type="radio" name="x" value="1" <%=ouiabonne %> >
+                    <br>
+                    <button type="submit" class="btn btn-outline-primary btnCard"><img src="/images/validIcon.svg" alt="validIcon"></button>
+                </form>
+            </div>
+            
+
+            <% if (toggleabonne == 0){ %>
+                <p>Désinscription à la newsletter validée</p>
+                <% }else if (toggleabonne == 1) { %>
+                    <p>Inscription à la newsletter validée</p>
+                    <%}%>
+    </body>
+
+
+    <% include footer %>
+
+</html>
